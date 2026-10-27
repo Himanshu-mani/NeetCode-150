@@ -3,12 +3,16 @@ from typing import List
 
 class Solution:
     def encode(self, strs: List[str]) -> str:
+        # Time: O(N + K), Space: O(N + K)
+        # N = total characters across all strings, K = number of strings
         res = ""
         for s in strs:
             res += str(len(s)) + "#" + s
         return res
 
     def decode(self, s: str) -> List[str]:
+        # Time: O(M), Space: O(M)
+        # M = length of the encoded string
         res = []
         i = 0
 
